@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "ES5",
+        "noImplicitAny": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "sourceMap": true,
+        "rootDir": "./",
+        "outDir": "../www"
+    },
+    "exclude": [
+        "../node_modules",
+        "bower_components",
+        "../www"
+    ]
+}

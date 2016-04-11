@@ -1,0 +1,17 @@
+<ons-page ng-controller="page2Controller">
+    <ons-toolbar>
+        <div class="left">
+            <ons-back-button>Back</ons-back-button>
+        </div>
+        <div class="center">Page 2</div>
+    </ons-toolbar>
+
+    <div style="text-align: center" hng-directive1="events.popPage()">
+        <br />
+        <ons-button modifier="light" ng-click="events.popPage()">
+            Pop Page
+        </ons-button>
+        <input class="text-input" id="my-input" style="margin-top: 10px; width: 100%">
+        <div class="testcss2" style="border: 1px solid; margin-top: 10px;"> {{'test' | filter1}} </div>
+    </div>
+</ons-page>

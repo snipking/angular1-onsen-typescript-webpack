@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="app.mainModule" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="app.mainModule" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="app.mainModule" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="app.mainModule" class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval' data: blob:;"/>
+        <title>Project Template</title>
+        <meta name="description" content="">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" >
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" href="bower_components/onsenui/css/onsenui.css">
+        <link rel="stylesheet" href="bower_components/onsenui/css/onsen-css-components-blue-basic-theme.css">
+        <script src="<%= webpackConfig.isProd ? 'bower_components/angular/angular.min.js' : 'bower_components/angular/angular.js' %>"></script>
+        <script src="<%= webpackConfig.isProd ? 'bower_components/angular-route/angular-route.min.js' : 'bower_components/angular-route/angular-route.js' %>"></script>
+        <script src="<%= webpackConfig.isProd ? 'bower_components/onsenui/js/onsenui.min.js' : 'bower_components/onsenui/js/onsenui.js' %>"></script>
+        <script src="<%= webpackConfig.isProd ? 'bower_components/oclazyload/dist/ocLazyLoad.min.js' : 'bower_components/oclazyload/dist/ocLazyLoad.js' %>"></script>
+        <script src="<%= htmlWebpackPlugin.files.chunks.common.entry %>"></script>
+        <script src="<%= htmlWebpackPlugin.files.chunks.app.entry %>"></script>
+        <link href="<%= htmlWebpackPlugin.files.css %>" rel="stylesheet" type="text/css"/>
+    </head>
+    <body ng-controller="rootController">
+    <ons-navigator var="globalNavigator">
+        <div>
+            <div ng-view></div>
+        </div>
+    </ons-navigator>
+</body>
+</html>

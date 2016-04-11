@@ -1,0 +1,33 @@
+{
+    "version": "v4",
+    "repo": "borisyankov/DefinitelyTyped",
+    "ref": "master",
+    "path": "src/typings",
+    "bundle": "src/typings/tsd.d.ts",
+    "installed": {
+        "angularjs/angular.d.ts": {
+            "commit": "bf4ecf5b68887ed5a065e3922885c34d0f5739df"
+        },
+        "jquery/jquery.d.ts": {
+            "commit": "bf4ecf5b68887ed5a065e3922885c34d0f5739df"
+        },
+        "webpack/webpack.d.ts": {
+            "commit": "bf4ecf5b68887ed5a065e3922885c34d0f5739df"
+        },
+        "uglify-js/uglify-js.d.ts": {
+            "commit": "bf4ecf5b68887ed5a065e3922885c34d0f5739df"
+        },
+        "source-map/source-map.d.ts": {
+            "commit": "bf4ecf5b68887ed5a065e3922885c34d0f5739df"
+        },
+        "oclazyload/oclazyload.d.ts": {
+            "commit": "bf4ecf5b68887ed5a065e3922885c34d0f5739df"
+        },
+        "onsenui/onsenui.d.ts": {
+            "commit": "bf4ecf5b68887ed5a065e3922885c34d0f5739df"
+        },
+        "angularjs/angular-route.d.ts": {
+            "commit": "bf4ecf5b68887ed5a065e3922885c34d0f5739df"
+        }
+    }
+}
