@@ -73,19 +73,19 @@ It will start a local server using `webpack-dev-server`, and scripts build with 
 
 ### Build files
 
-* developing build:
+* developing build:  
 ```bash
 gulp build-dev
 ```
-* production build:
+* production build:  
 ```bash
-gulp build-prod:
+gulp build-prod
 ```
-* clean distribution (www) folder
+* clean distribution (www) folder:  
 ```bash
-gulp clean:
+gulp clean
 ```
-* run and watch changes
+* run and watch changes:  
 ```bash
 gulp run-dev
 ```
