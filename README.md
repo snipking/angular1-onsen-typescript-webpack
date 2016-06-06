@@ -1,4 +1,4 @@
-# angular1-onsen-webpack
+# angular1-onsen-typescript-webpack
 
 [![Dependency Status](https://david-dm.org/snipking/angular1-onsen-typescript-webpack/status.svg)](https://david-dm.org/snipking/angular1-onsen-typescript-webpack#info=dependencies) [![devDependency Status](https://david-dm.org/snipking/angular1-onsen-typescript-webpack/dev-status.svg)](https://david-dm.org/snipking/angular1-onsen-typescript-webpack#info=devDependencies)
 
