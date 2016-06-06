@@ -24,12 +24,19 @@ export class HngDirective1 implements ng.IDirective {
 
     restrict = "A";
 
-    static instance(): ng.IDirective {
-        return new HngDirective1();
+    constructor(private $log: ng.ILogService) {
     }
 
-    link($scope: ng.IScope, elm: Element, attr: HngDirective1Interface, ngModel: ng.INgModelController): void {
+    static instance(): ng.IDirectiveFactory {
+        const directive = ($log: ng.ILogService) => new HngDirective1($log);
+        directive.$inject = ['$log'];
+        return directive;
+    }
+
+    link = ($scope: ng.IScope, elm: Element, attr: HngDirective1Interface, ngModel: ng.INgModelController): void => {
         var element = angular.element(elm);
+        this.$log.debug("hngDirective1 like called");
+        
         element.bind("keydown keypress", (event: JQueryEventObject) => {
 
             if (event.which === 13) {

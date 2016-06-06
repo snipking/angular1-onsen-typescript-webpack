@@ -27,7 +27,7 @@ let page2Module: ng.IModule;
 page2Module = angular.module('app.page2Module', [])
     .controller("page2Controller", page2Controller)
     .filter("filter1", filter1)
-    .directive("hngDirective1", HngDirective1.instance);
+    .directive("hngDirective1", HngDirective1.instance());
 
 export default page2Module;
 
