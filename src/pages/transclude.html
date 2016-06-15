@@ -1,0 +1,23 @@
+<ons-page ng-controller="transcludeController">
+    <ons-toolbar>
+        <div class="left">
+            <ons-back-button>Back</ons-back-button>
+        </div>
+        <div class="center">Directive Transclude</div>
+    </ons-toolbar>
+
+    <hng-transclude>
+        <hng-transclude-slot1>
+            <div style="background-color: lime">{{foo}}</div>
+        </hng-transclude-slot1>
+        <hng-transclude-slot2>
+            <div style="background-color: pink">{{bar}}</div>
+        </hng-transclude-slot2>
+    </hng-transclude>
+    
+    <div style="text-align: center">
+        <ons-button modifier="light" ng-click="events.popPage()">
+            Pop Page
+        </ons-button>
+    </div>
+</ons-page>

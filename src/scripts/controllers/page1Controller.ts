@@ -64,5 +64,37 @@ export class page1Controller {
             });
         }, "page2module");
     }
+    
+    pushPageToTransclude() {
+        let $log = this.$log;
+        let $ocLazyLoad = this.$ocLazyLoad;
+        let $window = this.$window;
+        require.ensure(["../modules/page2Module"], function(require) {
+            // load script
+            var page2Module = require("../modules/transcludeModule");
+            // inject angular module to current app module
+            $ocLazyLoad.inject('app.transcludeModule').then(function(args: any) {
+                $window.globalNavigator.pushPage('pages/transclude.html', { animation: 'slide' });
+            }, function(err: any) {
+                $log.error(err);
+            });
+        }, "page2module");
+    }
+    
+    pushPageToTranscludeDynamic() {
+        let $log = this.$log;
+        let $ocLazyLoad = this.$ocLazyLoad;
+        let $window = this.$window;
+        require.ensure(["../modules/page2Module"], function(require) {
+            // load script
+            var page2Module = require("../modules/transcludeModule");
+            // inject angular module to current app module
+            $ocLazyLoad.inject('app.transcludeModule').then(function(args: any) {
+                $window.globalNavigator.pushPage('pages/transcludeDynamic.html', { animation: 'slide' });
+            }, function(err: any) {
+                $log.error(err);
+            });
+        }, "page2module");
+    }
 }
 
