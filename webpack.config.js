@@ -57,7 +57,7 @@ var webpackConfig = {
                 //
                 // Reference: https://github.com/webpack/style-loader
                 // Use style-loader in development.
-                loader: isTest ? 'null' : ExtractTextPlugin.extract('style', 'css?sourceMap')
+                loader: isTest ? 'null' : ExtractTextPlugin.extract('style', 'css?sourceMap', {publicPath: "../"})
             }, {
                 // ASSET LOADER
                 // Reference: https://github.com/webpack/file-loader
@@ -65,9 +65,12 @@ var webpackConfig = {
                 // Rename the file using the asset hash
                 // Pass along the updated reference to your code
                 // You can add here any file extension you want to get copied to your output
-                test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/,
-                loader: 'file'
-            },
+                test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|eot)$/,
+                loader: 'url-loader?limit=8192'
+            }, {
+                test: /\.(ttf)$/,
+                loader: 'file-loader?name=css/font/[hash].[ext]'
+            }
             // {
             //   // HTML LOADER
             //   // Reference: https://github.com/webpack/raw-loader
@@ -105,7 +108,7 @@ var webpackConfig = {
             } : {},
             inject: false
         }),
-        new ExtractTextPlugin("css/app.bundle.css", {
+        new ExtractTextPlugin(isProd ? "css/app.[contenthash].bundle.css" : "css/app.bundle.css", {
             allChunks: true
         })
     ],
