@@ -1,4 +1,4 @@
-/* 
+/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -165,7 +165,7 @@ gulp.task("webpack:dev-server", function (callback) {
         stats: {
             colors: true
         }
-    }).listen(8384, "localhost", function (err) {
+    }).listen(8384, "0.0.0.0", function (err) {
         if (err) {
             throw new gutil.PluginError("webpack-dev-server", err);
         }
